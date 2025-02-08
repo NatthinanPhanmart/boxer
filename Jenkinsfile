@@ -11,7 +11,7 @@ pipeline {
         stage("Build Docker Image") {
             steps {
                 //path yaml files
-				ansiblePlaybook playbook: '/var/lib/jenkins/workspace/boxer_123/playbooks/build.yaml'
+				ansiblePlaybook playbook: '/var/lib/jenkins/workspace/66022590-html/playbooks/build.yaml'
             }    
         } 
         
