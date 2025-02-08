@@ -4,7 +4,7 @@ pipeline {
         stage("Copy file to Docker server"){
             steps {
 				//แก้ตรง team33-neogym ให้เป็นชื่อเดียวกับ pipeline job/item ที่สร้างใน jenkins
-                sh "scp -r /var/lib/jenkins/workspace/boxer_123/* root@43.208.253.87:~/boxer_123"
+                sh "scp -r /var/lib/jenkins/workspace/66022590-html/* root@43.208.146.8:~/66022590-html"
             }
         }
         
@@ -18,7 +18,7 @@ pipeline {
         stage("Create Docker Container") {
             steps {
                 //path yaml files
-				ansiblePlaybook playbook: '/var/lib/jenkins/workspace/boxer_123/playbooks/deploy.yaml'
+				ansiblePlaybook playbook: '/var/lib/jenkins/workspace/66022590-html/playbooks/deploy.yaml'
             }    
         } 
     }
